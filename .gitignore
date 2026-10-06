@@ -1,0 +1,25 @@
+# Dependencies (reinstalled with: npm install)
+node_modules/
+
+# Production build output (regenerated with: npm run build, built by Vercel automatically)
+dist/
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Local env files
+.env
+.env*.local
