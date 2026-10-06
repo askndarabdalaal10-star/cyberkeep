@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Shell } from './components/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -23,7 +23,7 @@ function Fallback() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<div className="min-h-screen p-8 max-w-[1400px] mx-auto"><Fallback /></div>}>
         <Routes>
           <Route element={<Shell />}>
@@ -50,6 +50,6 @@ export default function App() {
           </Route>
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: { host: true, port: 5173 },
+  // REQUIRED for GitHub Pages (sub-path hosting): emit relative asset URLs (./assets/…)
+  // so the app loads from https://USER.github.io/REPO/ instead of domain root.
+  base: './',
   build: {
     chunkSizeWarningLimit: 600,
     rollupOptions: {
